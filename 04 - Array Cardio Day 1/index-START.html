@@ -73,7 +73,11 @@
 
     // 7. sort Exercise
     // Sort the people alphabetically by last name
-
+    let newPeople = people.map((person) => person.split(','));
+    let sortedPeopleByLastName = newPeople.sort((a, b) => a[1].localeCompare(b[1]))
+    let sortedPeople = sortedPeopleByLastName.map((person) => person.join());
+    console.log(sortedPeople); 
+  
     // 8. Reduce Exercise
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
